@@ -1,0 +1,25 @@
+import java.util.*;
+public class Random {
+  	public static int getRandomNumberInRange(int min, int max) {
+int max, min;
+		if (min >= max) {
+			throw new IllegalArgumentException("max must be greater than min");
+		}
+
+		Random r = new Random();
+		int h = (max - min) + 1) + min;
+		int k = r.nextInt(h);
+		return k;
+		
+	}
+  
+  public static void main(String[] args) {
+    Scanner a = new Scanner(System.in);
+    System.out.println("Enter the first bound");
+    int b = a.nextInt();
+    System.out.println("Enter the second bound");
+    int c = a.nextInt();
+    System.out.println(getRandomNumberInRange(b,c));
+    
+  }
+}
